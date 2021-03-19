@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Netflox</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">This is First Fragment</string>
+    <string name="tab_text_2">This is Second Fragment</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Watch Anywhere!</string>
+    <string name="slide_1_desc">Lihat film dengan mudah tanpa download</string>
+
+    <string name="slide_2_title">Cheapest Plan</string>
+    <string name="slide_2_desc">Berlangganan murah dengan 50 Ribu!</string>
+
+    <string name="slide_3_title">See Whats Next</string>
+    <string name="slide_3_desc">Kunjungi Netflox sekarang</string>
+</resources>
