@@ -17,6 +17,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class FirstFragment extends Fragment {
     private PageViewModel pageViewModel;
     private PageViewModel2 pageViewModel2;
+    private PageViewModel3 pageViewModel3;
 
     public FirstFragment() {
 // Required empty public constructor
@@ -39,6 +40,8 @@ public class FirstFragment extends Fragment {
                 ViewModelProviders.of(requireActivity()).get(PageViewModel.class);
         pageViewModel2 =
                 ViewModelProviders.of(requireActivity()).get(PageViewModel2.class);
+        pageViewModel3 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel3.class);
     }
 
     @Override
@@ -84,6 +87,26 @@ public class FirstFragment extends Fragment {
             public void onTextChanged(CharSequence charSequence, int i,
                                       int i1, int i2) {
                 pageViewModel2.setName(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        TextInputEditText nameEditText3 =
+                view.findViewById(R.id.input3);
+// Add Text Watcher on name input text
+        nameEditText3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int
+                    i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i,
+                                      int i1, int i2) {
+                pageViewModel3.setName(charSequence.toString());
             }
 
             @Override

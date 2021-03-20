@@ -15,7 +15,8 @@ import androidx.lifecycle.ViewModelProviders;
 public class SecondFragment extends Fragment {
     private PageViewModel pageViewModel;
     private PageViewModel2 pageViewModel2;
-    private TextView txtName, txtName2;
+    private PageViewModel3 pageViewModel3;
+    private TextView txtName, txtName2, txtName3;
 
     public SecondFragment() {
 // Required empty public constructor
@@ -38,6 +39,8 @@ public class SecondFragment extends Fragment {
                 ViewModelProviders.of(requireActivity()).get(PageViewModel.class);
         pageViewModel2 =
                 ViewModelProviders.of(requireActivity()).get(PageViewModel2.class);
+        pageViewModel3 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel3.class);
     }
 
     @Override
@@ -67,6 +70,15 @@ public class SecondFragment extends Fragment {
                     @Override
                     public void onChanged(@Nullable String s2) {
                         txtName2.setText(s2);
+                    }
+                });
+
+        txtName3 = view.findViewById(R.id.view3);
+        pageViewModel3.getName().observe(requireActivity(), new
+                Observer<String>() {
+                    @Override
+                    public void onChanged(@Nullable String s3) {
+                        txtName3.setText(s3);
                     }
                 });
     }
